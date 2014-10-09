@@ -12,4 +12,6 @@ p <- ggplot(dat) +
   facet_wrap(~sep, ncol = 1, scale = "free_y") +
   scale_color_brewer(palette = "Set1") +
   theme_bw(16) + theme(legend.position = "top")
+png("tssd.png", width = 1600, height = 1600, res = 1600 / 7)
 print(p)
+dev.off()
