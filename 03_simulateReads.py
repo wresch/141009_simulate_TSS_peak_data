@@ -1,6 +1,7 @@
 #! /usr/bin/env python
 
 import sys
+import click
 from Bio import SeqIO
 import numpy
 
@@ -19,6 +20,7 @@ def readGtf(fn):
 
 def readFa(fn):
     return SeqIO.read(fn, "fasta").seq
+
 
 def sim_reads(tss_list, frag_size, fe, peakwidth, libsize, bpseq):
     hfs = frag_size // 2
